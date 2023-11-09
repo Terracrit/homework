@@ -1,0 +1,88 @@
+:root {
+    --color-primeri-1: #FFFFFF;
+    --color-primeri-2: #2B7FFF;
+    --color-primeri-3: #011C44;
+    --color-secondori-1: #4A4A4A;
+    --color-secondori-2: #747272;
+    --color-secondori-3: #011F4A;
+    --color-secondori-4: #FFD02B;
+}
+body{
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: 'Roboto';
+}
+.button {
+    color: var(--color-primeri-1);
+    background-color: var(--color-primeri-2);
+    border: 2px solid var(--color-primeri-2);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.17;
+}
+.text-span{
+    font-weight: 600;
+}
+.button:hover {
+    color: var(--color-primeri-3);
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.17;
+}
+.hero-titel{
+    font-family: 'Play';
+    color: var(--color-primeri-2);
+    font-weight: 700;
+    font-size: 140px;
+    line-height: 1.2;
+}
+ul {
+    list-style-type: none;
+}
+.start{
+    color:var(--color-primeri-3) ;
+    font-size: 18px;
+    text-decoration: none;
+}
+.start:hover{
+    color: var(--color-primeri-2);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.17;
+}
+.titel{
+    font-family: 'Play';
+        color: var(--color-primeri-3);
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 1.2;
+}
+.titel1{
+    font-family: 'Play';
+        color: var(--color-primeri-2);
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 1.2;
+}
+.text-end{
+    font-weight: 600;
+    color: var(--color-primeri-1);
+    line-height: 1.17;
+}
+.span2{
+    color: var(--color-primeri-2);
+}
+.referencing{
+    line-height: 1.15;
+    color: var(--color-primeri-1);
+}
+.address-cop{
+    font-weight: 13;
+    font-size: 13px;
+    color: var(--color-secondori-2);
+}
