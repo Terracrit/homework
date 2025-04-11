@@ -1,1 +1,1 @@
-[Homework 1](https://Terracrit.github.io/homework/genius-homework1/)<br>  
+[Homework 1](https://Terracrit.github.io/homework/genius-homework-1/)<br>  
