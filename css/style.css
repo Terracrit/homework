@@ -1,0 +1,55 @@
+/* Глобальні */
+:root {
+  --primary-color-white: #ffffff;
+  --primary-color-light: #2b7fff;
+  --primary-color-dark: #011c44;
+  --brand-color-blue: #011f4a;
+  --brand-color-yellow: #ffd02b;
+  --brand-color-gray-light: #747272;
+  --brand-color-gray: #4a4a4a;
+  --brand-color-gray-dark: #4a4a4a;
+}
+body {
+  color: var(--primary-color-dark);
+  color: var(--primary-color-dark);
+}
+/*button*/
+.button-hero-section {
+  background-color: var(--primary-color-light);
+}
+.button-contact-section {
+  background-color: var(--primary-color-light);
+}
+/* Посилання */
+.link {
+  color: var(--primary-color-dark);
+}
+.link:hover {
+  color: var(--primary-color-light);
+}
+/*hero-section*/
+.h1-span {
+  color: var(--primary-color-light);
+}
+/* information-section */
+.information-h-span {
+  color: var(--primary-color-light);
+}
+.information-p-span {
+  color: var();
+}
+/* choise-section */
+.choise-span {
+  color: var(--primary-color-light);
+}
+/* procedures-section */
+.procedures-span {
+  color: var(--primary-color-light);
+}
+/* contact-section */
+.contact-h-span {
+  color: var(--primary-color-light);
+}
+.contact-p-span {
+  color: var(--primary-color-light);
+}
