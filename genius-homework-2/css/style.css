@@ -305,7 +305,7 @@ footer {
   margin-bottom: 16px;
 }
 .footer-icon {
-  fill: #ffffff;
+  fill: var(--primary-color-white);
 }
 .adres-list {
   display: flex;
