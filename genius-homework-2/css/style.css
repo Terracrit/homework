@@ -246,6 +246,10 @@ footer {
 .procedures-ul {
   display: flex;
   gap: 16px;
+  padding-left: 0;
+}
+.procedure-li {
+  flex-basis: calc((100% - 96px) / 3);
 }
 /* contact-section */
 .contact-section-titel {
