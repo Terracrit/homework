@@ -46,6 +46,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+  margin: 0;
 }
 h1,
 h2,
@@ -148,8 +149,7 @@ footer {
   gap: 40px;
   padding-left: 0;
 }
-.header-icon {
-}
+
 /*hero-section*/
 .hero-titel {
   color: var(--primary-color-light);
@@ -171,7 +171,7 @@ footer {
   margin-bottom: 126px;
 }
 .hero-section {
-  background-image: url(/images/back-hero.jpg);
+  background-image: url(../images/back-hero.jpg);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -222,8 +222,7 @@ footer {
   box-shadow: 0px 4px 4px 0px #a8c6f561;
   flex-wrap: wrap;
 }
-.choise-img {
-}
+
 .choise-section-titel {
   max-width: 432px;
   text-align: center;
@@ -304,4 +303,11 @@ footer {
 }
 .footer-item {
   margin-bottom: 16px;
+}
+.footer-icon {
+  fill: #ffffff;
+}
+.adres-list {
+  display: flex;
+  gap: 24px;
 }
