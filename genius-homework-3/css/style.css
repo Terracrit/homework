@@ -29,6 +29,17 @@
   font-weight: 700;
   src: url("../fonts/roboto-v47-latin-700.woff2") format("woff2");
 }
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /* Глобальні */
 :root {
   --primary-color-white: #ffffff;
@@ -65,6 +76,8 @@ p {
 }
 address {
   font-style: normal;
+  transition: color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 ul {
   margin: 0;
@@ -73,6 +86,8 @@ ul {
 }
 a {
   text-decoration: none;
+  transition: color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 .hidden {
   position: absolute;
@@ -83,7 +98,7 @@ a {
   overflow: hidden;
 }
 .section-titel {
-  font-family: "Play";
+  font-family: "Play", sans-serif;
   font-weight: 700;
   font-size: 64px;
 }
@@ -92,18 +107,28 @@ a {
 }
 footer {
   background-color: var(--brand-color-blue);
+  position: relative;
+}
+button {
+  transition: color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 /*button*/
 .button-section {
   background-color: var(--primary-color-light);
   font-weight: 600;
   color: var(--primary-color-white);
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   border: 0;
   border-radius: 32px;
   width: 219px;
   height: 53px;
   padding: 16px 32px;
+}
+.button-section:hover {
+  color: var(--brand-color-blue);
+  background-color: transparent;
+  border: 2px solid var(--primary-color-light);
 }
 .procedures-button {
   display: flex;
@@ -119,14 +144,20 @@ footer {
   fill: var(--brand-color-blue);
   flex-shrink: 0;
 }
+.procedures-button:hover {
+  background-color: var(--primary-color-light);
+  fill: var(--primary-color-white);
+  border-color: var(--primary-color-white);
+}
 /* link */
 .link {
   color: var(--primary-color-dark);
   text-decoration: none;
 }
-.link:hover {
+.link:hover,
+.footer-link:hover {
   color: var(--primary-color-light);
-  font-weight: 700;
+  /*font-weight: 700;*/
 }
 .footer-link {
   color: var(--primary-color-white);
@@ -161,14 +192,20 @@ footer {
 }
 .header {
   position: absolute;
-  top: 32px;
+  top: 0;
   left: 0;
   width: 100%;
+  backdrop-filter: blur(10px);
+  padding: 32px 0;
+  z-index: 1;
+}
+.header-icon:hover {
+  fill: var(--primary-color-light);
 }
 /*hero-section*/
 .hero-titel {
   color: var(--primary-color-light);
-  font-family: "Play";
+  font-family: "Play", sans-serif;
   font-weight: 700;
   font-size: 140px;
   line-height: 0.8;
@@ -186,11 +223,18 @@ footer {
   margin-top: 76px;
 }
 .hero-section {
-  background-image: url(../images/back-hero.jpg);
+  background-image: linear-gradient(
+      89.38deg,
+      #ffffff 30.62%,
+      rgba(255, 255, 255, 0.850898) 41.31%,
+      rgba(255, 255, 255, 0.193204) 58.65%,
+      rgba(255, 255, 255, 0) 72.78%
+    ),
+    url(../images/back-hero.jpg);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  padding: 17px 0 195px 0;
+  padding: 30px 0 195px 0;
 }
 /* information-section */
 .information-section-titel {
@@ -209,16 +253,55 @@ footer {
   margin-bottom: 0;
 }
 .information-section {
-  display: flex;
-  gap: 32px;
-  margin-bottom: 117px;
+  position: relative;
+  padding-bottom: 200px;
+  margin-bottom: 175px;
+  height: 100%;
+  max-height: 695px;
+  padding-top: 40px;
 }
 .information-section-img {
   border-radius: 50%;
 }
+.information-section-img.first {
+  position: absolute;
+  top: 0;
+  right: 272px;
+}
+.information-section-img.second {
+  position: absolute;
+  bottom: 0px;
+  right: 100px;
+}
+.icon-Star_blue {
+  fill: var(--primary-color-light);
+  position: absolute;
+  right: 73px;
+  top: 32px;
+}
+.icon-Star_litle {
+  position: absolute;
+  right: 106px;
+  top: 207px;
+}
+.icon-Star-big {
+  position: absolute;
+  right: 395px;
+  bottom: 272px;
+}
+.icon {
+  animation: pulse 3s ease-in-out infinite;
+  transform-origin: center;
+  display: inline-block;
+}
 /* choise-section */
 .choise-section {
-  background: rgba(43, 127, 255, 0.2) 39.74%;
+  background: linear-gradient(
+    -142.77deg,
+    rgba(43, 127, 255, 0.2) 39.74%,
+    rgba(43, 127, 255, 0) 54.16%,
+    rgba(43, 127, 255, 0) 66.66%
+  );
 }
 .choise-text {
   color: var(--dark);
@@ -237,9 +320,8 @@ footer {
   box-shadow: 0px 4px 4px 0px #a8c6f561;
   flex-wrap: wrap;
 }
-
 .choise-section-titel {
-  max-width: 432px;
+  max-width: 441px;
   text-align: center;
   margin: 0 auto 48px;
 }
@@ -251,6 +333,7 @@ footer {
   color: var(--primary-color-white);
   font-size: 22px;
   line-height: 1.2;
+  font-weight: 400;
 }
 .procedures-list {
   display: flex;
@@ -268,6 +351,42 @@ footer {
 }
 .procedures-button.next {
   transform: rotate(180deg);
+}
+.procedures-carts {
+  width: 344px;
+  height: 456px;
+  border-radius: 4px 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.women-relax {
+  background-image: linear-gradient(
+      180deg,
+      rgba(1, 28, 68, 0) 48.53%,
+      rgba(1, 28, 68, 0.725825) 84.61%,
+      var(--brand-color-blue) 101.39%
+    ),
+    url(../images/women-relax.jpg);
+}
+.women-needle {
+  background-image: linear-gradient(
+      180deg,
+      rgba(1, 28, 68, 0) 48.53%,
+      rgba(1, 28, 68, 0.725825) 84.61%,
+      var(--brand-color-blue) 101.39%
+    ),
+    url(../images/women-needle.jpg);
+}
+.women-massage {
+  background-image: linear-gradient(
+      180deg,
+      rgba(1, 28, 68, 0) 48.53%,
+      rgba(1, 28, 68, 0.725825) 84.61%,
+      var(--brand-color-blue) 101.39%
+    ),
+    url(../images/women-massage.jpg);
 }
 /* contact-section */
 .contact-section-titel {
@@ -336,6 +455,8 @@ footer {
   margin-bottom: 24px;
   background-color: transparent;
   color: var(--primary-color-white);
+  transition: color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 .contact-input::placeholder {
   color: var(--primary-color-white);
@@ -352,11 +473,15 @@ footer {
   height: 100%;
 }
 .contact-button {
+  font-family: "Roboto", sans-serif;
   margin: 0 auto 8px;
   display: block;
-  max-width: 281px;
+  max-width: 295px;
   width: 100%;
   font-size: 18px;
+}
+.contact-button:hover {
+  color: var(--primary-color-white);
 }
 /*footer-section*/
 .footer-agree {
@@ -388,6 +513,22 @@ footer {
 .footer-icon {
   fill: var(--primary-color-white);
 }
+.footer-icon:hover {
+  fill: var(--primary-color-light);
+}
+.footer::after {
+  background-image: url(../images/pills.png);
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 247px;
+  height: 152px;
+  background-size: auto;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
 .adres-list {
   display: flex;
   gap: 24px;
@@ -406,6 +547,7 @@ footer {
   padding: 20px 0;
   transition: opacity 0.3s, visibility 0.3s;
   color: var(--primary-color-white);
+  z-index: 2;
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -427,6 +569,10 @@ footer {
   position: absolute;
   top: 40px;
   right: 40px;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  fill: var(--primary-color-white);
 }
 .modal-titel {
   font-family: "Play";
@@ -457,6 +603,8 @@ footer {
   margin-bottom: 24px;
   background-color: transparent;
   color: var(--primary-color-white);
+  transition: color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 .form-input::placeholder {
   color: var(--primary-color-white);
@@ -489,6 +637,10 @@ footer {
 .form-button {
   margin: 0 auto 8px;
   display: block;
+  width: 236px;
+}
+.form-button:hover {
+  color: var(--primary-color-white);
 }
 .form-text-end {
   color: var(--brand-color-gray-light);
