@@ -564,7 +564,9 @@ button {
   padding: 42px 144px;
   border-radius: 48px;
   overflow: auto;
+  position: relative;
 }
+
 .modal-btn-close {
   position: absolute;
   top: 40px;
