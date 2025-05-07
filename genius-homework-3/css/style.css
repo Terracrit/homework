@@ -41,6 +41,11 @@
   }
 }
 /* Глобальні */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
 :root {
   --primary-color-white: #ffffff;
   --primary-color-light: #2b7fff;
@@ -151,6 +156,9 @@ button {
   fill: var(--primary-color-white);
   border-color: var(--primary-color-white);
 }
+.modal-btn-open {
+  margin-bottom: 14px;
+}
 /* link */
 .link {
   color: var(--primary-color-dark);
@@ -222,7 +230,7 @@ button {
 }
 .hero-conteiner {
   padding: 60px auto auto 106px;
-  margin-top: 76px;
+  margin-top: 83px;
 }
 .hero-section {
   background-image: linear-gradient(
@@ -237,6 +245,16 @@ button {
   background-position: center top;
   background-size: cover;
   padding: 30px 0 195px 0;
+  position: relative;
+}
+.waves {
+  position: absolute;
+  background-image: url(../images/waves.svg);
+  bottom: -1px;
+  rotate: 180deg;
+  left: 0;
+  width: 100%;
+  height: 133px;
 }
 /* information-section */
 .information-section-titel {
@@ -298,12 +316,16 @@ button {
 }
 /* choise-section */
 .choise-section {
-  background: linear-gradient(
-    -142.77deg,
-    rgba(43, 127, 255, 0.2) 39.74%,
-    rgba(43, 127, 255, 0) 54.16%,
-    rgba(43, 127, 255, 0) 66.66%
-  );
+  position: relative;
+}
+.background {
+  background-image: url(../images/background-choise.svg);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  top: 1370px;
 }
 .choise-text {
   color: var(--dark);
@@ -328,6 +350,10 @@ button {
   margin: 0 auto 48px;
 }
 /* procedures-section */
+.procedures-conteiner {
+  padding: 0;
+  margin-bottom: 96px;
+}
 .procedures-section-titel {
   text-align: center;
 }
@@ -341,7 +367,6 @@ button {
   display: flex;
   align-items: center;
   gap: 32px;
-  margin-bottom: 96px;
 }
 .procedures-ul {
   display: flex;
@@ -390,6 +415,13 @@ button {
     ),
     url(../images/women-massage.jpg);
 }
+.point-procedures-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  fill: var(--brand-color-gray-light);
+  margin-top: 32px;
+}
 /* contact-section */
 .contact-section-titel {
   text-align: center;
@@ -436,6 +468,7 @@ button {
   z-index: 0;
 }
 .contact-form::after {
+  border-radius: 10%;
   content: "";
   background-size: contain;
   background-repeat: no-repeat;
@@ -605,8 +638,6 @@ footer::before {
   padding: 42px 144px;
   border-radius: 48px;
   overflow: auto;
-  position: relative;
-  z-index: 0;
 }
 .modal::before {
   content: "";
@@ -688,7 +719,14 @@ footer::before {
   height: 52px;
   max-width: 378px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.form-field:last-child {
+  margin-bottom: 0;
+}
+
 .user-label {
   display: block;
 }
