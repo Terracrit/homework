@@ -1,0 +1,45 @@
+.information-section {
+  position: relative;
+  padding-bottom: 200px;
+  margin-bottom: 175px;
+  height: 100%;
+  max-height: 695px;
+
+  &__text {
+    max-width: 709px;
+    max-height: 456px;
+    font-size: 22px;
+    max-width: 709px;
+    margin-bottom: 40px;
+    padding-top: 30px;
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__conteiner {
+    display: flex;
+    gap: 32px;
+    width: 1240px;
+    justify-content: space-between;
+    padding-top: 10px;
+  }
+  &__titel {
+    max-width: 529px;
+    margin-bottom: 40px;
+  }
+}
+.img-conteiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 500px;
+  gap: 40px;
+  :last-child {
+    align-self: flex-end;
+  }
+  &__img {
+    border-radius: 50%;
+    width: 335px;
+    height: 328px;
+  }
+}

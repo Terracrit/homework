@@ -1,0 +1,21 @@
+.icon {
+  animation: pulse 3s ease-in-out infinite;
+  transform-origin: center;
+  display: inline-block;
+}
+.icon-Star_blue {
+  fill: var(--primary-color-light);
+  position: absolute;
+  right: 173px;
+  top: 32px;
+}
+.icon-Star_litle {
+  position: absolute;
+  right: 206px;
+  top: 250px;
+}
+.icon-Star-big {
+  position: absolute;
+  right: 495px;
+  bottom: 272px;
+}
