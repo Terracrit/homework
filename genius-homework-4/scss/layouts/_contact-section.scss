@@ -3,12 +3,17 @@
     text-align: center;
   }
 
+  &__container {
+    padding: 0;
+  }
+
   &__list {
     display: flex;
     gap: 32px;
     margin-bottom: 94px;
     justify-content: center;
     align-items: center;
+    overflow: visible;
 
     @media screen and (max-width: $tablet) {
       flex-direction: column-reverse;
@@ -32,6 +37,8 @@
       height: 176px;
       margin: 0 -24px;
       border-radius: 16px;
+      width: 100%;
+      overflow: visible;
       border: none;
     }
   }

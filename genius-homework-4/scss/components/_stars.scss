@@ -29,4 +29,8 @@
     right: 70px;
     bottom: -54px;
   }
+  @media screen and (max-width: $mobile) {
+    right: 70px;
+    bottom: -70px;
+  }
 }

@@ -27,9 +27,8 @@
     justify-content: space-between;
     padding-top: 10px;
 
-    @media screen and (max-width: $desktop) {
+    @media screen and (max-width: $mobile) {
       display: block;
-      padding-right: 40px;
     }
   }
   &__titel {
