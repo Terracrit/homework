@@ -8,6 +8,11 @@
   font-family: "Play", sans-serif;
   font-weight: 700;
   font-size: 64px;
+
+  @media screen and (max-width: $desktop) {
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+  }
 }
 .underline {
   color: var(--brand-color-gray-light);

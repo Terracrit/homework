@@ -8,14 +8,25 @@
   position: absolute;
   right: 173px;
   top: 32px;
+  @media screen and (max-width: $desktop) {
+    display: none;
+  }
 }
 .icon-Star_litle {
   position: absolute;
   right: 206px;
   top: 250px;
+  @media screen and (max-width: $desktop) {
+    display: none;
+  }
 }
 .icon-Star-big {
   position: absolute;
   right: 495px;
   bottom: 272px;
+
+  @media screen and (max-width: $desktop) {
+    right: 70px;
+    bottom: -54px;
+  }
 }

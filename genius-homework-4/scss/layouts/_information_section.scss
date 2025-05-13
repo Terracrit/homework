@@ -4,11 +4,14 @@
   margin-bottom: 175px;
   height: 100%;
   max-height: 695px;
+  @media screen and (max-width: $desktop) {
+    padding-bottom: 0;
+    margin-bottom: 100px;
+  }
 
   &__text {
     max-width: 709px;
     max-height: 456px;
-    font-size: 22px;
     max-width: 709px;
     margin-bottom: 40px;
     padding-top: 30px;
@@ -19,13 +22,23 @@
   &__conteiner {
     display: flex;
     gap: 32px;
-    width: 1240px;
+    max-width: 1240px;
     justify-content: space-between;
     padding-top: 10px;
+
+    @media screen and (max-width: $desktop) {
+      display: block;
+      padding-right: 40px;
+    }
   }
   &__titel {
     max-width: 529px;
     margin-bottom: 40px;
+
+    @media screen and (max-width: $desktop) {
+      max-width: 264px;
+      margin-bottom: 24px;
+    }
   }
 }
 .img-conteiner {
@@ -34,6 +47,9 @@
   justify-content: space-between;
   width: 500px;
   gap: 40px;
+  @media screen and (max-width: $desktop) {
+    display: none;
+  }
   :last-child {
     align-self: flex-end;
   }
