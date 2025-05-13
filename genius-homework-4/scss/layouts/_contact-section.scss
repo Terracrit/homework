@@ -3,10 +3,6 @@
     text-align: center;
   }
 
-  &__container {
-    padding: 0;
-  }
-
   &__list {
     display: flex;
     gap: 32px;
@@ -28,7 +24,6 @@
     width: 600px;
     height: 482px;
     @media screen and (max-width: $desktop) {
-      margin: auto;
       width: 320px;
       height: 500px;
     }
