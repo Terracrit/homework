@@ -29,6 +29,9 @@
   border-radius: 48px;
   overflow: auto;
   z-index: 1;
+  @media screen and (max-width: $desktop) {
+    padding: 42px;
+  }
 
   &::before {
     content: "";
@@ -60,6 +63,10 @@
     margin-bottom: 40px;
     line-height: 1.2;
     z-index: 2;
+    @media screen and (max-width: $desktop) {
+      font-family: "Roboto", sans-serif;
+      font-size: 32px;
+    }
   }
 
   &__text {
@@ -69,6 +76,11 @@
     text-align: center;
     margin: 0 auto;
     margin-bottom: 32px;
+
+    @media screen and (max-width: $desktop) {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+    }
   }
 
   &__btn-close {
